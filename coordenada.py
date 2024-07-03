@@ -1,13 +1,10 @@
 import pyautogui
-import pandas
+import pandas as pd
 import time
+
 pyautogui.pause = 1
-pyautogui.click(x=605, y=1058)
-pyautogui.click(x=770, y=846)
-
-tabela = pandas.read_csv('Escritorio/teste1.csv')
+tabela = pd.read_excel('teste1.xlsx')
 print(tabela)
-
 
 for linha in tabela.index:
     codigo = str(tabela.loc[linha, "nome"])
